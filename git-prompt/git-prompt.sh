@@ -19,4 +19,4 @@ parse_git_state() {
   fi
 }
 
-export PS1="\n$GREEN\u@\h $PURPLE\w $CYAN($(parse_git_branch)$RED$(parse_git_state)$CYAN)\n$RED\$$RESET "
+export PS1="\n$GREEN\u@\h $PURPLE\w $CYAN(\$(parse_git_branch)$RED\$(parse_git_state)$CYAN)\n$RED\$$RESET "
