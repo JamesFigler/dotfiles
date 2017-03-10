@@ -5,4 +5,8 @@
 alias ls="ls --color=auto"
 alias ll="ls -Alh --color=auto"
 
-git config --global alias.hist "log --pretty=format:'%C(auto)%h %Cblue%cn %Cgreen(%cr) %C(reset)%s'"
+alias gco="git checkout"
+alias ga="git add"
+alias gc="git commit"
+alias gl="git log --pretty=format:'%C(auto)%h %Cblue%cn %Cgreen(%cr) %C(reset)%s'"
+alias gs="git status"
