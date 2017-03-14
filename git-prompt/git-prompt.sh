@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # git-prompt.sh
 
@@ -7,6 +7,10 @@ RED="\[\033[0;31m\]"
 GREEN="\[\033[1;32m\]"
 CYAN="\[\033[0;36m\]"
 PURPLE="\[\033[0;35m\]"
+
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
+  . /usr/share/git-core/contrib/completion/git-prompt.sh
+fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\n$GREEN\u@\h $PURPLE\w $CYAN\$(__git_ps1 '(%s)')\n$RED\$$RESET "
