@@ -13,4 +13,4 @@ if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
 fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1="\n$GREEN\u@\h $PURPLE\w $CYAN\$(__git_ps1 '(%s)')\n$RED\$$RESET "
+export PS1="$RESET\n\A $GREEN\u@\h $PURPLE\w $CYAN\$(__git_ps1 '(%s)')\n$RED\$$RESET "
