@@ -1,9 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 #
 # alias.sh
 
-alias ls="ls --color=auto"
-alias ll="ls -Alh --color=auto"
+# Linux specific aliases
+if [[ $(uname) == "Linux" ]]; then
+  alias ls="ls --color=auto"
+  alias ll="ls -lh --color=auto"
+  alias la="ls -Alh --color=auto"
+
+# Mac/BSD specific aliases
+elif [[ $(uname) == "Darwin" ]]; then
+  alias ls="ls -G"
+  alias ll="ls -lhG"
+  alias la="ls -AlhG"
+fi
+
 
 alias gco="git checkout"
 alias ga="git add"

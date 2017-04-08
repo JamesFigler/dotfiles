@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # git-prompt.sh
 
@@ -8,8 +8,13 @@ GREEN="\[\033[1;32m\]"
 CYAN="\[\033[0;36m\]"
 PURPLE="\[\033[0;35m\]"
 
+# Fedora/RHEL location
 if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
   . /usr/share/git-core/contrib/completion/git-prompt.sh
+
+# Mac location
+elif [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
